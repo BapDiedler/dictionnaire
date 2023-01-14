@@ -1,11 +1,29 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class Expression{
-    String eleFrancais
-    String eleAnglais
+class Expression{
+    private String eleFrancais
+    private String eleAnglais
+
+    public Expression(String eleFrancais, String eleAnglais)
+    public Expression(String eleFrancais)
+
+    public void setFrancais()
+    public void setAnglais()
+
+    public String getFrancais()
+    public String getAnglais()
+    public String toString()
 }
-class Mot
-class Phrase
+class Phrase{
+    private ArrayList<Expression> expressions
+
+    public Phrase(Expression... expressions)
+
+    public void ajouter(Expression expression)
+
+    public Expression get(int index)
+    public String toString()
+}
 
 @enduml

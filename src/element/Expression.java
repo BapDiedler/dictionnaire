@@ -53,4 +53,12 @@ public class Expression {
     public String getAnglais(){
         return eleAnglais;
     }
+
+    /**
+     * methode toString de la classe
+     * @return l'affichage de la classe
+     */
+    public String toString(){
+        return eleFrancais + " -> " + eleAnglais;
+    }
 }
